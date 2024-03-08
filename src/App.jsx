@@ -18,11 +18,11 @@ function App() {
 
   useEffect(() => {
     if (!localStorage.getItem("token") && location.pathname != "/register") {
-      navigate("/register")
+      navigate("/login")
     }
   })
 
-  function ProjectedRote({ children, redirectTo = "/register", isAuthentication }) {
+  function ProjectedRote({ children, redirectTo = "/login", isAuthentication }) {
     if (!isAuthentication) {
       navigate(redirectTo)
     }

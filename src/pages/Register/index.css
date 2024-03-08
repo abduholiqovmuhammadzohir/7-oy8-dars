@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -22,7 +22,7 @@
 .register-form {
     padding: 32px;
     background-color: #161D2F;
-    border-radius:15px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -37,11 +37,37 @@
     margin-bottom: 30px;
 }
 
-.register-form input{
+.register-form input {
     background-color: transparent;
     border: none;
-    border-bottom:1px solid #5A698F;
+    border-bottom: 1px solid #5A698F;
     padding: 18px 0px;
+    color:white;
+    outline: none;
+}
 
+.register-form button {
+    height: 48px;
+    background-color: #FC4747;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: center;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
+.register-form p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0px;
+}
+
+.register-form Link{
+    color:  rgba(252, 71, 71, 1);
 }

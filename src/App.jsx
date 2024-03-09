@@ -1,6 +1,6 @@
 import './App.css'
 import { useState, useEffect } from "react"
-import { Routes, Route, useNavigate , useLocation } from "react-router-dom"
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom"
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Home from './pages/Home'
@@ -9,6 +9,7 @@ import Series from './pages/Series'
 import Bookmarks from './pages/Bookmarks'
 import About from './pages/About'
 import Error from './pages/Error'
+import Layout from './layout/Layout'
 
 function App() {
 
@@ -39,31 +40,41 @@ function App() {
 
         <Route path='/' element={
           <ProjectedRote isAuthentication={token ? true : false}>
-            <Home></Home>
+            <Layout>
+              <Home></Home>
+            </Layout>
           </ProjectedRote>}>
         </Route>
 
         <Route path='/movies' element={
           <ProjectedRote isAuthentication={token ? true : false}>
-            <Movies></Movies>
+            <Layout>
+              <Movies></Movies>
+            </Layout>
           </ProjectedRote>}>
         </Route>
 
         <Route path='/series' element={
           <ProjectedRote isAuthentication={token ? true : false}>
-            <Series></Series>
+            <Layout>
+              <Series></Series>
+            </Layout>
           </ProjectedRote>}>
         </Route>
 
         <Route path='/bookmarks' element={
           <ProjectedRote isAuthentication={token ? true : false}>
-            <Bookmarks></Bookmarks>
+            <Layout>
+              <Bookmarks></Bookmarks>
+            </Layout>
           </ProjectedRote>}>
         </Route>
 
         <Route path='/about' element={
           <ProjectedRote isAuthentication={token ? true : false}>
-            <About></About>
+            <Layout>
+              <About></About>
+            </Layout>
           </ProjectedRote>}>
         </Route>
 
